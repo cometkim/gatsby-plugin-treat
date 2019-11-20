@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-treat",
   "description": "Gatsby plugin for styling with treat",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha.0",
   "main": "index.js",
   "repository": "https://github.com/cometkim/gatsby-plugin-treat.git",
   "author": "Hyeseong Kim <cometkim.kr@gmail.com>",
