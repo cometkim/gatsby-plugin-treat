@@ -14,9 +14,27 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ sta
     plugins: [new TreatPlugin({
       outputLoaders: [
         loaders.miniCssExtract(),
-        loaders.css()
       ],
-      outputCSS: ['build-html', 'build-javascript'].includes(stage),
+      outputCSS: [
+        'develop',
+        'develop-html',
+        'build-javascript',
+        /**
+         * FIXME: build fails on `gatsby build` with message:
+         * ```
+         * ERROR #98123  WEBPACK
+         * Generating SSR bundle failed
+         * this[MODULE_TYPE] is not a function
+         * ```
+         * See https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/issues/162
+         * See https://github.com/webpack-contrib/mini-css-extract-plugin/issues/73
+         */
+        // 'build-html',
+      ].includes(stage),
+      /**
+       * To be:
+       */
+      // outputCss: true,
     })],
   })
 }
