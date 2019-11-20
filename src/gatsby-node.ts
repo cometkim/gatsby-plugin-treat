@@ -9,9 +9,6 @@ export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = ({ actions
   })
 }
 
-// FIXME: Currently not working because of the version of webpack
-// @See https://github.com/webpack/webpack/commit/ea172ec5fdebb77647adde4c8406e9d0b2bbd48c
-// @See https://github.com/gatsbyjs/gatsby/pull/14792
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ stage, loaders, actions }) => {
   actions.setWebpackConfig({
     plugins: [new TreatPlugin({

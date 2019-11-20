@@ -21,7 +21,7 @@
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
-    "gatsby": ">=2.0.0",
+    "gatsby": ">=2.15.0",
     "treat": ">=1.0.0"
   },
   "dependencies": {
